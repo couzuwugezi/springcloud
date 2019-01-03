@@ -1,4 +1,4 @@
-package com.springcloud.api.controller;
+package com.springcloud.provide.controller;
 
 import com.springcloud.dao.SysUserInfoDao;
 import org.springframework.beans.factory.annotation.Autowired;
