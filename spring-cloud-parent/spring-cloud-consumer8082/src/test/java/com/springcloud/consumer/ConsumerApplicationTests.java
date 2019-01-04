@@ -1,4 +1,4 @@
-package com.springboot.consumer;
+package com.springcloud.consumer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

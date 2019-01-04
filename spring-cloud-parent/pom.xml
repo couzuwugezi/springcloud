@@ -11,7 +11,7 @@
         <module>spring-cloud-provide8080</module>
         <module>spring-cloud-api</module>
         <module>spring-cloud-eneity-dao</module>
-        <module>spring-cloud-consumer8082</module>
+        <!--<module>spring-cloud-consumer8082</module>-->
     </modules>
 
     <parent>
