@@ -30,17 +30,17 @@ public class SysUserInfoController {
      * @param id 主键
      * @return 单条数据
      */
-    @GetMapping("/consumer/user/get/{id}")
+    @GetMapping("/user/get/{id}")
     public SysUserInfo selectOne(@PathVariable("id") Integer id) {
         return this.sysUserInfoService.queryById(id);
     }
 
-    @GetMapping(value = "/consumer/user/list")
+    @GetMapping(value = "/user/list")
     public List<SysUserInfo> list(){
         return sysUserInfoService.queryAll(new SysUserInfo());
     }
 
-    @PostMapping(value = "/consumer/user/add")
+    @PostMapping(value = "/user/add")
     public boolean add(SysUserInfo sysUserInfo){
         return sysUserInfoService.insert(sysUserInfo);
     }
