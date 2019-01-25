@@ -42,7 +42,7 @@ public class SysUserControllerConsumer {
     }
 
     @GetMapping(value = "consumer/user/list")
-    public List<SysUserInfo> list(){
+    public List list(){
         return restTemplate.getForObject(REST_URL_PREFIX + "/user/list", List.class);
     }
 }
