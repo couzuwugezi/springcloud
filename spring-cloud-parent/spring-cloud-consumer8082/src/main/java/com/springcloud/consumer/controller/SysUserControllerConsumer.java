@@ -38,11 +38,16 @@ public class SysUserControllerConsumer {
 
     @GetMapping(value = "/consumer/user/get/{id}")
     public SysUserInfo get(@PathVariable("id") Integer id) {
-        return Optional.ofNullable(restTemplate.getForObject(REST_URL_PREFIX + "/user/get"+ id, SysUserInfo.class)).orElse(null);
+        return Optional.ofNullable(restTemplate.getForObject(REST_URL_PREFIX + "/user/get" + id, SysUserInfo.class)).orElse(null);
     }
 
     @GetMapping(value = "consumer/user/list")
-    public List list(){
+    public List list() {
         return restTemplate.getForObject(REST_URL_PREFIX + "/user/list", List.class);
+    }
+
+    @GetMapping(value = "consumer/discovery")
+    public Object discovery() {
+        return restTemplate.getForObject(REST_URL_PREFIX + "/provide8080/discovery", Object.class);
     }
 }

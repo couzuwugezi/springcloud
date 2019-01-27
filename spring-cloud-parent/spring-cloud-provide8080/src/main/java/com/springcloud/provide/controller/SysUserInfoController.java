@@ -2,6 +2,9 @@ package com.springcloud.provide.controller;
 
 import com.springcloud.entity.SysUserInfo;
 import com.springcloud.provide.service.SysUserInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +27,9 @@ public class SysUserInfoController {
     @Resource
     private SysUserInfoService sysUserInfoService;
 
+    @Autowired
+    private DiscoveryClient client;
+
     /**
      * 通过主键查询单条数据
      *
@@ -36,13 +42,24 @@ public class SysUserInfoController {
     }
 
     @GetMapping(value = "/user/list")
-    public List<SysUserInfo> list(){
+    public List<SysUserInfo> list() {
         return sysUserInfoService.queryAll(new SysUserInfo());
     }
 
     @PostMapping(value = "/user/add")
-    public boolean add(SysUserInfo sysUserInfo){
+    public boolean add(SysUserInfo sysUserInfo) {
         return sysUserInfoService.insert(sysUserInfo);
     }
 
+    @GetMapping(value = "/provide8080/discovery")
+    public Object discovery() {
+//        List<String> services = client.getServices();
+//        List<String> collect = services.stream().filter("PROVIDE8080"::equals).collect(Collectors.toList());
+
+        List<ServiceInstance> serverList = client.getInstances("PROVIDE8080");
+        serverList.forEach(element -> System.out.println(element.getServiceId() + "\t"
+                + element.getHost() + "\t" + element.getPort() + "\t" + element.getUri()));
+
+        return this.client;
+    }
 }
