@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
-    name: provide8080
+    name: provide8081
   devtools:
     restart:
       enabled: false
@@ -58,9 +58,9 @@ eureka:
     service-url:
       defaultZone: http://eureka.server7001.com:7001/eureka/,http://eureka.server7002.com:7002/eureka/,http://eureka.server7003.com:7003/eureka/
   instance:
-    instance-id: eureka-client-8080
+    instance-id: eureka-client-8081
     prefer-ip-address: true
 
 info:
-  app.name: spring-cloud-eureka-client-8080
-  descripe: "8080服务,Eureka客户端"
+  app.name: spring-cloud-eureka-client-8081
+  descripe: "8081服务,Eureka客户端"
