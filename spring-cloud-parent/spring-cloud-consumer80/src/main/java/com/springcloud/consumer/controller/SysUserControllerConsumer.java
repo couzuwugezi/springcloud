@@ -24,7 +24,7 @@ public class SysUserControllerConsumer {
     /**
      * 通过rest访问时指定访问服务提供方,随后配置了ribbon的客户端消费者就能 均衡访问目标服务
      */
-    private static final String REST_URL_PREFIX = "http://PROVIDE8081";
+    private static final String REST_URL_PREFIX = "http://PROVIDE";
 
     /**
      * RestTemplate

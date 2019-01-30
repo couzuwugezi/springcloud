@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-    name: provide8080
+    name: provide
   devtools:
     restart:
       enabled: false
