@@ -1,6 +1,10 @@
 server:
   port: 7001
 
+logging:
+  level:
+    root: debug
+
 eureka:
   instance:
     hostname: eureka.server7001.com #eureka服务端的实例名称

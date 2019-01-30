@@ -51,7 +51,7 @@ mybatis:
 
 logging:
   level:
-    com.springcloud.provide: debug
+    root: debug
 
 eureka:
   client:
