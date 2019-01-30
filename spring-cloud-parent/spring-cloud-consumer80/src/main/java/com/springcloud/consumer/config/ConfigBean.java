@@ -1,8 +1,5 @@
 package com.springcloud.consumer.config;
 
-import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
-import com.netflix.loadbalancer.RetryRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,13 +27,13 @@ public class ConfigBean {
         return new RestTemplate();
     }
 
-    /**
-     * 目的就是用我们重新选择的算法替换默认的轮询算法
-     *
-     * @return 返回其他的负载算法
-     */
-    @Bean
-    public IRule getRule() {
-        return new RetryRule();
-    }
+//    /**
+//     * 目的就是用我们重新选择的算法替换默认的轮询算法
+//     *
+//     * @return 返回其他的负载算法
+//     */
+//    @Bean
+//    public IRule getRule() {
+//        return new RandomRule();
+//    }
 }
