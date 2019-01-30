@@ -15,11 +15,11 @@ public class ConfigBean {
 
     /**
      * <p>
-     *
-     * @return
      * @LoadBalanced 客户端负载均衡
      * spring cloud ribbon 是一套客户端的负载均衡工具
      * </p>
+     *
+     * @return
      */
     @Bean
     @LoadBalanced
