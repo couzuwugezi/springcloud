@@ -1,7 +1,7 @@
-package com.springcloud.provide8081.controller;
+package com.springcloud.provide8080.controller;
 
 import com.springcloud.entity.SysUserInfo;
-import com.springcloud.provide8081.service.SysUserInfoService;
+import com.springcloud.provide8080.service.SysUserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -20,7 +20,7 @@ import java.util.List;
  * @since 2019-01-04 15:58:31
  */
 @RestController
-public class SysUserInfoController {
+public class SysUserInfoController8080 {
     /**
      * 服务对象
      */
@@ -65,6 +65,6 @@ public class SysUserInfoController {
 
     @GetMapping(value = "/check/jiqun")
     public String check() {
-        return "我是8081";
+        return "我是8080";
     }
 }

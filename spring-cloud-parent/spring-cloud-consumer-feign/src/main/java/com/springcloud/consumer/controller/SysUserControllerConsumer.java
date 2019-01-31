@@ -21,18 +21,23 @@ public class SysUserControllerConsumer {
     @Autowired
     private SysUserInfoService sysUserInfoService;
 
-    @GetMapping("/user/get/{id}")
+    @GetMapping(value = "/consumer/user/get/{id}")
     public SysUserInfo selectOne(@PathVariable("id") Integer id) {
         return sysUserInfoService.queryById(id);
     }
 
-    @GetMapping(value = "/user/list")
+    @GetMapping(value = "consumer/user/list")
     public List<SysUserInfo> list() {
-        return sysUserInfoService.queryAll(new SysUserInfo());
+        return sysUserInfoService.queryAll();
     }
 
-    @PostMapping(value = "/user/add")
+    @PostMapping(value = "/consumer/user/add")
     public boolean add(SysUserInfo sysUserInfo) {
         return sysUserInfoService.insert(sysUserInfo);
+    }
+
+    @GetMapping(value = "consumer/check")
+    public String check() {
+        return sysUserInfoService.check();
     }
 }

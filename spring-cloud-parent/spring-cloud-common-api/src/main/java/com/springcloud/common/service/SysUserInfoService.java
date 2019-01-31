@@ -38,11 +38,10 @@ public interface SysUserInfoService {
     /**
      * 根据给定字段查询数据
      *
-     * @param sysUserInfo 实例对象
      * @return 实例对象
      */
     @GetMapping(value = "/user/list")
-    List<SysUserInfo> queryAll(SysUserInfo sysUserInfo);
+    List<SysUserInfo> queryAll();
 
     /**
      * 测试负载均衡
