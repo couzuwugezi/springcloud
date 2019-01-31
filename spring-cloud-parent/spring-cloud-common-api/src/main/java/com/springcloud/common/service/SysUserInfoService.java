@@ -34,7 +34,7 @@ public interface SysUserInfoService {
      */
     @PostMapping(value = "/user/add")
     boolean insert(SysUserInfo sysUserInfo);
-    
+
     /**
      * 根据给定字段查询数据
      *
@@ -44,4 +44,10 @@ public interface SysUserInfoService {
     @GetMapping(value = "/user/list")
     List<SysUserInfo> queryAll(SysUserInfo sysUserInfo);
 
+    /**
+     * 测试负载均衡
+     * @return
+     */
+    @GetMapping(value = "/check/jiqun")
+    String check();
 }
