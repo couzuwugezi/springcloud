@@ -1,4 +1,4 @@
-package com.springcloud.provide8080.service;
+package com.springcloud.hystrix.service;
 
 import com.springcloud.entity.SysUserInfo;
 

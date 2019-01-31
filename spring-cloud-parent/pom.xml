@@ -18,6 +18,7 @@
         <module>spring-cloud-provide8082</module>
         <module>spring-cloud-consumer-feign</module>
         <module>spring-cloud-common-api</module>
+        <module>spring-cloud-provide-hystrix8080</module>
     </modules>
 
     <properties>

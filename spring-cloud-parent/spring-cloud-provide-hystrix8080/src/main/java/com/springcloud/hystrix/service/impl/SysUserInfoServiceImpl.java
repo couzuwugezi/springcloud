@@ -1,8 +1,8 @@
-package com.springcloud.provide8080.service.impl;
+package com.springcloud.hystrix.service.impl;
 
 import com.springcloud.dao.SysUserInfoDao;
 import com.springcloud.entity.SysUserInfo;
-import com.springcloud.provide8080.service.SysUserInfoService;
+import com.springcloud.hystrix.service.SysUserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
