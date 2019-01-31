@@ -10,5 +10,3 @@ eureka:
     service-url:
       defaultZone: http://eureka.server7001.com:7001/eureka/,http://eureka.server7002.com:7002/eureka/,http://eureka.server7003.com:7003/eureka/
     register-with-eureka: false
-#    fetch-registry: true # 避免每次请求都去server端,在本地缓存一份
-#    registry-fetch-interval-seconds: 15 # 为了保证缓存数据的有效性,定时去服务器同步一下
